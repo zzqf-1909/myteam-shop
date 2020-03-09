@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/myteam-shop-common/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-dependencies/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-server/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-service/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-web/pom.xml" />
+      </list>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/myteam-shop.iml" filepath="$PROJECT_DIR$/.idea/myteam-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myteam-shop-common/myteam-shop-common.iml" filepath="$PROJECT_DIR$/myteam-shop-common/myteam-shop-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myteam-shop-dependencies/myteam-shop-dependencies.iml" filepath="$PROJECT_DIR$/myteam-shop-dependencies/myteam-shop-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myteam-shop-server/myteam-shop-server.iml" filepath="$PROJECT_DIR$/myteam-shop-server/myteam-shop-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myteam-shop-service/myteam-shop-service.iml" filepath="$PROJECT_DIR$/myteam-shop-service/myteam-shop-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myteam-shop-web/myteam-shop-web.iml" filepath="$PROJECT_DIR$/myteam-shop-web/myteam-shop-web.iml" />
+    </modules>
+  </component>
+</project>
