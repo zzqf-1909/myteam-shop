@@ -7,18 +7,24 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="myteam-shop-dependencies" />
-        <module name="myteam-shop-common" />
         <module name="myteam-shop-server" />
-        <module name="myteam-shop-web" />
+        <module name="myteam-shop-entity" />
         <module name="myteam-shop-service" />
+        <module name="myteam-shop-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="myteam-shop-common" target="1.5" />
       <module name="myteam-shop-dependencies" target="1.5" />
+      <module name="myteam-shop-entity" target="1.5" />
       <module name="myteam-shop-server" target="1.5" />
       <module name="myteam-shop-service" target="1.5" />
       <module name="myteam-shop-web" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="myteam-shop-entity" options="" />
+    </option>
   </component>
 </project>
