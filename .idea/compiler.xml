@@ -2,21 +2,39 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="myteam-shop-dependencies" />
-        <module name="myteam-shop-server" />
+        <module name="myteam-shop-email-service" />
+        <module name="myteam-shop-basic" />
+        <module name="myteam-shop-eureka-server" />
+        <module name="myteam-shop-register-web" />
+        <module name="myteam-shop-cart-service" />
+        <module name="myteam-shop-mapper" />
+        <module name="myteam-shop-cart-web" />
         <module name="myteam-shop-entity" />
         <module name="myteam-shop-service" />
+        <module name="myteam-shop-dependencies" />
+        <module name="myteam-shop-register-service" />
         <module name="myteam-shop-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="myteam-shop-basic" target="1.5" />
+      <module name="myteam-shop-cart-service" target="1.8" />
+      <module name="myteam-shop-cart-web" target="1.8" />
       <module name="myteam-shop-common" target="1.5" />
-      <module name="myteam-shop-dependencies" target="1.5" />
+      <module name="myteam-shop-dao" target="1.8" />
+      <module name="myteam-shop-dependencies" target="1.8" />
+      <module name="myteam-shop-email-service" target="1.8" />
       <module name="myteam-shop-entity" target="1.5" />
+      <module name="myteam-shop-eureka-server" target="1.8" />
+      <module name="myteam-shop-mapper" target="1.8" />
+      <module name="myteam-shop-regist-web" target="1.8" />
+      <module name="myteam-shop-register-service" target="1.8" />
+      <module name="myteam-shop-register-web" target="1.8" />
       <module name="myteam-shop-server" target="1.5" />
       <module name="myteam-shop-service" target="1.5" />
       <module name="myteam-shop-web" target="1.5" />
@@ -24,7 +42,17 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="myteam-shop-cart-service" options="-parameters" />
+      <module name="myteam-shop-cart-web" options="-parameters" />
+      <module name="myteam-shop-dao" options="-parameters" />
+      <module name="myteam-shop-dependencies" options="-parameters" />
+      <module name="myteam-shop-email-service" options="-parameters" />
       <module name="myteam-shop-entity" options="" />
+      <module name="myteam-shop-eureka-server" options="-parameters" />
+      <module name="myteam-shop-mapper" options="-parameters" />
+      <module name="myteam-shop-regist-web" options="-parameters" />
+      <module name="myteam-shop-register-service" options="-parameters" />
+      <module name="myteam-shop-register-web" options="-parameters" />
     </option>
   </component>
 </project>

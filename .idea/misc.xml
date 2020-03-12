@@ -8,10 +8,17 @@
       <list>
         <option value="$PROJECT_DIR$/myteam-shop-common/pom.xml" />
         <option value="$PROJECT_DIR$/myteam-shop-dependencies/pom.xml" />
-        <option value="$PROJECT_DIR$/myteam-shop-server/pom.xml" />
         <option value="$PROJECT_DIR$/myteam-shop-service/pom.xml" />
         <option value="$PROJECT_DIR$/myteam-shop-web/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-service/myteam-shop-email-service/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-web/myteam-shop-register-service/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-common/myteam-shop-mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-web/myteam-shop-register-web/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-web/myteam-shop-cart-web/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-service/myteam-shop-cart-service/pom.xml" />
       </list>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
