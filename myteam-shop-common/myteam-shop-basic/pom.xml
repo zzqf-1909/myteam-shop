@@ -10,6 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>myteam-shop-basic</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.qf</groupId>
+            <artifactId>myteam-shop-entity</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>

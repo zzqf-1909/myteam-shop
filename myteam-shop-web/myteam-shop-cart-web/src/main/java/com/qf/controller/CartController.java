@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.transform.Result;
 import java.math.BigInteger;
 import java.util.UUID;
 
@@ -43,12 +44,14 @@ public class CartController {
                                  HttpServletResponse response){
 
         Object u = request.getAttribute("user");
-        //=================已登录状态下的购物车===================
-//        if(u!=null){
-//            TUser user = (TUser) u;
-//            Integer userId = user.getId();
-//
-//        }
+//        =================已登录状态下的购物车===================
+        if(u!=null){
+            TUser user = (TUser) u;
+            String userId = user.getId().toString();
+            String url = String.format("http://cart-service/cart/addProduct/%s/%s/%s",userId,productId,count);
+            ResultBean resultBean = restTemplate.getForObject(url, ResultBean.class);
+            return resultBean;
+        }
 
 
         //=================未登录状态下的购物车===================
@@ -66,4 +69,133 @@ public class CartController {
         ResultBean resultBean = restTemplate.getForObject(url, ResultBean.class);
         return resultBean;
     }
+
+    /**
+     * 清空购物车
+     * @param uuid
+     * @param request
+     * @return
+     */
+    @RequestMapping("/clean")
+    @ResponseBody
+    public ResultBean cleanCart(@CookieValue(name = CookieConstant.USER_CART_1,required = false) String uuid,
+                                HttpServletRequest request,
+                                HttpServletResponse response){
+
+        Object o = request.getAttribute("user");
+
+        if (o!=null){
+//        =================已登录状态下的购物车===================
+            TUser user = (TUser) o;
+            String userId = user.getId().toString();
+            String url = String.format("http://cart-service/cart/clean/%s",userId);
+            ResultBean resultBean = restTemplate.getForObject(url, ResultBean.class);
+            return resultBean;
+        }
+
+//        =================未登录状态下的购物车===================
+        //1.删除cookie
+        //2.清除购物车
+        if (uuid!=null&&!"".equals(uuid)){
+            Cookie cookie = new Cookie(CookieConstant.USER_CART_1, "");
+            cookie.setPath("/");
+            cookie.setMaxAge(0);
+            response.addCookie(cookie);
+
+            String url = String.format("http://cart-service/cart/clean/%s",uuid);
+            ResultBean resultBean = restTemplate.getForObject(url, ResultBean.class);
+            return resultBean;
+        }
+
+        return ResultBean.error("当前用户没有购物车");
+
+    }
+
+    /**
+     * 更新购物车
+     * @param productId
+     * @param count
+     * @param uuid
+     * @param request
+     * @return
+     */
+    @RequestMapping("/update/{productId}/{count}")
+    @ResponseBody
+    public ResultBean updateCart(@PathVariable Integer productId,
+                                 @PathVariable Integer count,
+                                 @CookieValue(name = CookieConstant.USER_CART_1,required = false)String uuid,
+                                 HttpServletRequest request){
+        Object o = request.getAttribute("user");
+        if(o!=null){
+//          ==============已登录===============
+            TUser user = (TUser) o;
+            String userId = user.getId().toString();
+            String url = String.format("http://cart-service/cart/update/%s/%s/%s",userId,productId.toString(),count);
+            ResultBean resultBean = restTemplate.getForObject(url, ResultBean.class);
+            return resultBean;
+        }
+
+//          ===============未登录===============
+        String url = String.format("http://cart-service/cart/update/%s/%s/%s",uuid,productId,count);
+        ResultBean resultBean = restTemplate.getForObject(url, ResultBean.class);
+        return resultBean;
+
+    }
+
+    /**
+     * 展示购物车
+     * @param uuid
+     * @param request
+     * @return
+     */
+    @RequestMapping("/show")
+    @ResponseBody
+    public ResultBean show(@CookieValue(name = CookieConstant.USER_CART_1,required = false)String uuid,
+                           HttpServletRequest request){
+
+        Object o = request.getAttribute("user");
+        if (o!=null) {
+//          ==============已登录===============
+            TUser user = (TUser) o;
+            Integer userId = user.getId();
+            String url = String.format("http://cart-service/cart/show/%s",userId);
+            ResultBean resultBean = restTemplate.getForObject(url, ResultBean.class);
+            return resultBean;
+        }
+        //          ===============未登录===============
+        String url = String.format("http://cart-service/cart/show/%s",uuid);
+        ResultBean resultBean = restTemplate.getForObject(url, ResultBean.class);
+        return resultBean;
+    }
+
+    /**
+     * 合并购物车
+     * @param uuid
+     * @param request
+     * @param response
+     * @return
+     */
+    @RequestMapping("/merge")
+    @ResponseBody
+    public ResultBean merge(@CookieValue(name = CookieConstant.USER_CART_1,required = false)String uuid,
+                            HttpServletRequest request,
+                            HttpServletResponse response){
+
+        TUser user = (TUser) request.getAttribute("user");
+        String userId = null;
+        if (user != null) {
+            userId = user.getId().toString();
+        }
+
+        //合并完需要清除cookie
+        Cookie cookie = new Cookie(CookieConstant.USER_CART_1, "");
+        cookie.setMaxAge(0);
+        cookie.setPath("/");
+        response.addCookie(cookie);
+
+        String url = String.format("http://cart-service/cart/merge/%s/%s",userId,uuid);
+        ResultBean resultBean = restTemplate.getForObject(url, ResultBean.class);
+        return resultBean;
+    }
+
 }
