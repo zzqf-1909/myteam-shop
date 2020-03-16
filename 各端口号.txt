@@ -1,16 +1,19 @@
 前端：
 
 后端：
-  数据库：
+  工具：
     redis：6379
     mysql：3306
+    rabbitmq-server：15672
+    solr：8983
   服务器：
     eureka-server：8761
-    rabbitmq-server：15672
   服务提供者：
     email-service：8762
     register-service：8763
     cart-service：12302
+    search-service：12304
   服务消费者：
-    register-web:7762
-    cart-web:12301
+    register-web：7762
+    cart-web：12301
+    search-web：12303

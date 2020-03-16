@@ -17,6 +17,8 @@
         <option value="$PROJECT_DIR$/myteam-shop-web/myteam-shop-register-web/pom.xml" />
         <option value="$PROJECT_DIR$/myteam-shop-web/myteam-shop-cart-web/pom.xml" />
         <option value="$PROJECT_DIR$/myteam-shop-service/myteam-shop-cart-service/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-web/myteam-shop-search-web/pom.xml" />
+        <option value="$PROJECT_DIR$/myteam-shop-service/myteam-shop-search-service/pom.xml" />
       </list>
     </option>
   </component>

@@ -8,7 +8,9 @@
     <file url="file://$PROJECT_DIR$/myteam-shop-service/myteam-shop-cart-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myteam-shop-service/myteam-shop-cart-service/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myteam-shop-service/myteam-shop-email-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myteam-shop-service/myteam-shop-search-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myteam-shop-web/myteam-shop-cart-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myteam-shop-web/myteam-shop-register-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myteam-shop-web/myteam-shop-search-web" charset="UTF-8" />
   </component>
 </project>

@@ -2,15 +2,15 @@ spring:
   application:
     name: eureka-server
 
-#server:
-#  port: 8761
+server:
+  port: 8761
 
 eureka:
   instance:
-#    hostname: 47.99.196.17
-    prefer-ip-address: true
-    ip-address: 47.99.196.17
-    non-secure-port: 8761
+    hostname: localhost
+#    prefer-ip-address: true
+#    ip-address: 47.99.196.17
+#    non-secure-port: 8761
 
   client:
     register-with-eureka: false

@@ -13,6 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/myteam-shop-eureka-server/myteam-shop-eureka-server.iml" filepath="$PROJECT_DIR$/myteam-shop-eureka-server/myteam-shop-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/myteam-shop-common/myteam-shop-mapper/myteam-shop-mapper.iml" filepath="$PROJECT_DIR$/myteam-shop-common/myteam-shop-mapper/myteam-shop-mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/myteam-shop-web/myteam-shop-register-web/myteam-shop-register-service.iml" filepath="$PROJECT_DIR$/myteam-shop-web/myteam-shop-register-web/myteam-shop-register-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myteam-shop-service/myteam-shop-search-service/myteam-shop-search-service.iml" filepath="$PROJECT_DIR$/myteam-shop-service/myteam-shop-search-service/myteam-shop-search-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myteam-shop-web/myteam-shop-search-web/myteam-shop-search-web.iml" filepath="$PROJECT_DIR$/myteam-shop-web/myteam-shop-search-web/myteam-shop-search-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/myteam-shop-service/myteam-shop-service.iml" filepath="$PROJECT_DIR$/myteam-shop-service/myteam-shop-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/myteam-shop-web/myteam-shop-web.iml" filepath="$PROJECT_DIR$/myteam-shop-web/myteam-shop-web.iml" />
     </modules>
